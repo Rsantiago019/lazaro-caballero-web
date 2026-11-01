@@ -1,2 +1,3 @@
-/.vscode
-/supabase.sql
+.vscode/
+.vercel/
+assets/cabalgata.mp4
