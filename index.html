@@ -9,7 +9,7 @@
       content="Lázaro Caballero, cantautor y compositor de folklore argentino. Nacido en Formosa, canta al monte, al Chaco salteño y a las tradiciones criollas."
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#140d08" />
+    <meta name="theme-color" content="#171b1d" />
     <title>Lázaro Caballero | Cantautor de folklore argentino</title>
     <link rel="icon" href="./favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
@@ -43,14 +43,14 @@
         theme: {
           extend: {
             colors: {
-              ink: "#140d08",
-              tierra: "#211710",
-              cuero: "#3a2616",
-              paper: "#efe4cf",
-              crudo: "#d9c9a8",
-              gold: "#c2954a",
-              coral: "#8a2f1c",
-              celeste: "#8fb3cf",
+              ink: "#171b1d",
+              tierra: "#222729",
+              cuero: "#343a3b",
+              paper: "#f2f0eb",
+              crudo: "#d6d0c4",
+              gold: "#b69a68",
+              coral: "#79584e",
+              celeste: "#9eacb4",
             },
             fontFamily: {
               display: ["Cormorant Garamond", "Georgia", "serif"],
@@ -81,21 +81,21 @@
 
       body {
         font-family: "Lato", Arial, sans-serif;
-        background: #140d08;
+        background: #171b1d;
       }
 
       .display-type {
         font-family: "Cormorant Garamond", Georgia, serif;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: 0.01em;
       }
 
       .eyebrow {
         font-size: 0.7rem;
         font-weight: 900;
-        letter-spacing: 0.32em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: #c2954a;
+        color: #b69a68;
       }
 
       /* Grano de papel/cuero sobre fondos oscuros y claros. */
@@ -107,55 +107,40 @@
         inset: 0.5rem;
         display: grid;
         place-items: center;
-        background: rgba(20, 13, 8, 0.25);
-        color: #efe4cf;
+        background: rgba(23, 27, 29, 0.3);
+        color: #f2f0eb;
         font-size: 1.75rem;
         transition: background 0.3s, color 0.3s;
       }
       a:hover > div > .video-play {
-        background: rgba(20, 13, 8, 0.1);
-        color: #c2954a;
+        background: rgba(23, 27, 29, 0.15);
+        color: #b69a68;
       }
       .grain::after {
         position: absolute;
         inset: 0;
         content: "";
         pointer-events: none;
-        opacity: 0.16;
+        opacity: 0.025;
         mix-blend-mode: overlay;
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       }
 
       .bg-pampa {
         background:
-          radial-gradient(ellipse at 75% 20%, rgba(194, 149, 74, 0.22), transparent 55%),
-          linear-gradient(180deg, #140d08 0%, #211710 100%);
+          linear-gradient(180deg, #171b1d 0%, #202527 100%);
       }
 
-      /* Papel envejecido: fibras, manchas y viñeta de bordes quemados. */
       .bg-papel {
-        background-color: #eadcc0;
-        background-image:
-          radial-gradient(ellipse at center, transparent 50%, rgba(110, 70, 30, 0.28) 100%),
-          radial-gradient(circle at 18% 22%, rgba(150, 100, 40, 0.14), transparent 28%),
-          radial-gradient(circle at 82% 78%, rgba(150, 100, 40, 0.12), transparent 30%),
-          url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.04 .9' numOctaves='4' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .22  0 0 0 0 .08  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='.55'/%3E%3C/svg%3E");
+        background-color: #f2f0eb;
       }
 
-      /* Cuero curtido: poro fino, viñeta y brillo suave. */
       .bg-cuero-tex {
-        background-color: #3a2616;
-        background-image:
-          radial-gradient(ellipse at 30% 0%, rgba(194, 149, 74, 0.2), transparent 55%),
-          radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.45) 100%),
-          url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='turbulence' baseFrequency='.55' numOctaves='2' seed='9'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 -.15'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)' opacity='.35'/%3E%3C/svg%3E");
+        background-color: #292f31;
       }
 
-      /* Costura de cuero: borde punteado dorado. */
       .costura {
-        border: 1px dashed rgba(194, 149, 74, 0.55);
-        outline: 1px solid rgba(194, 149, 74, 0.25);
-        outline-offset: 5px;
+        border: 1px solid rgba(182, 154, 104, 0.35);
       }
 
       /* Cartel de lema: Patria · Campo · Trabajo. */
@@ -174,28 +159,22 @@
         display: none;
       }
 
-      /* Guarda pampa: greca de rombos y escalones, típica de la platería y el tejido criollo. */
       .guarda {
-        height: 22px;
-        background-color: #140d08;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22' viewBox='0 0 44 22'%3E%3Cpath d='M0 11 L11 0 L22 11 L11 22 Z' fill='none' stroke='%23c2954a' stroke-width='1.4'/%3E%3Cpath d='M11 6 L16 11 L11 16 L6 11 Z' fill='%238a2f1c'/%3E%3Cpath d='M22 11 L33 0 L44 11 L33 22 Z' fill='none' stroke='%23c2954a' stroke-width='1.4'/%3E%3Cpath d='M33 6 L38 11 L33 16 L28 11 Z' fill='%23c2954a' fill-opacity='.7'/%3E%3C/svg%3E");
-        background-repeat: repeat-x;
-        background-position: center;
-        border-block: 1px solid rgba(194, 149, 74, 0.45);
+        height: 1px;
+        background-color: rgba(182, 154, 104, 0.35);
       }
 
-      /* Hilo celeste y blanco, discreto, como cinta de la bandera. */
       .cinta {
-        height: 4px;
-        background: linear-gradient(to right, #8fb3cf 0 33.33%, #f4efe4 33.33% 66.66%, #8fb3cf 66.66% 100%);
+        height: 2px;
+        background: #b69a68;
       }
 
       .foto-sepia {
-        filter: sepia(0.35) contrast(1.05) saturate(0.9);
+        filter: saturate(0.88) contrast(1.02);
       }
 
       .hero-kenburns {
-        filter: sepia(0.5) saturate(0.8);
+        filter: saturate(0.78);
         animation: kenburns 28s ease-in-out infinite alternate;
       }
 
@@ -209,21 +188,21 @@
       }
 
       #hero-video {
-        filter: sepia(0.35) saturate(0.85) contrast(1.05);
+        filter: saturate(0.78) contrast(1.04);
       }
 
       .ornamento {
         display: flex;
         align-items: center;
         gap: 1rem;
-        color: #c2954a;
+        color: #b69a68;
       }
       .ornamento::before,
       .ornamento::after {
         content: "";
         height: 1px;
         flex: 1;
-        background: linear-gradient(to right, transparent, rgba(194, 149, 74, 0.6));
+        background: linear-gradient(to right, transparent, rgba(182, 154, 104, 0.45));
       }
       .ornamento::after {
         transform: scaleX(-1);
@@ -272,7 +251,7 @@
         <div id="nav-links" class="absolute left-0 right-0 top-[4.25rem] hidden flex-col gap-1 border-b border-gold/20 bg-ink px-5 py-5 lg:static lg:flex lg:flex-row lg:items-center lg:gap-8 lg:border-0 lg:bg-transparent lg:p-0">
           <a class="nav-link whitespace-nowrap py-2 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-paper/75 transition hover:text-gold" href="#semblanza">Semblanza</a>
           <a class="nav-link whitespace-nowrap py-2 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-paper/75 transition hover:text-gold" href="#musica">Música</a>
-          <a class="nav-link whitespace-nowrap py-2 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[#c8f23d] transition hover:text-white" href="#festival">Festival Yvy Porá</a>
+          <a class="nav-link whitespace-nowrap py-2 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-gold transition hover:text-paper" href="#festival">Festival Yvy Porá</a>
           <a class="nav-link whitespace-nowrap py-2 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-paper/75 transition hover:text-gold" href="#momentos">Momentos</a>
           <a class="nav-link whitespace-nowrap py-2 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-paper/75 transition hover:text-gold" href="#agenda">Agenda</a>
         </div>
@@ -315,7 +294,7 @@
               <a href="#semblanza" class="inline-flex items-center gap-3 border border-gold/60 px-8 py-4 text-xs font-black uppercase tracking-[0.22em] text-paper transition hover:border-gold hover:bg-gold/10">
                 Conocerlo
               </a>
-              <a href="#festival" class="inline-flex items-center gap-2 rounded-full bg-[#c8f23d] px-5 py-3 text-[0.65rem] font-black uppercase tracking-[0.2em] text-[#0c5c55] transition hover:bg-paper">¡Festival Yvy Porá 2026! →</a>
+              <a href="#festival" class="inline-flex items-center gap-2 border border-gold/60 px-5 py-3 text-[0.65rem] font-bold uppercase tracking-[0.14em] text-gold transition hover:bg-gold hover:text-ink">Festival Yvy Porá 2026 <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>
@@ -424,31 +403,30 @@
       </section>
             <div class="cinta" aria-hidden="true"></div>
 
-      <!-- Festival Yvy Porá: paleta propia del afiche (rojo, verde azulado y lima). -->
-      <section id="festival" class="relative overflow-hidden bg-[#0c5c55] py-20 md:py-28">
-        <svg class="pointer-events-none absolute -right-10 -top-10 h-56 w-56 text-[#0c5c55] md:h-80 md:w-80" viewBox="0 0 200 200" aria-hidden="true"><path fill="#0a4a45" d="M200 0v140l-30-30 10-34-34 6-10-34-30 22-14-36-22 30-30-12 6 32-30 6 20 28-30 16 34 4 6 32 28-20 22 32 12-34 36 4-6-34 34-10-22-28z"/></svg>
+      <section id="festival" class="relative overflow-hidden bg-[#253936] py-20 md:py-28">
+        <svg class="pointer-events-none absolute -right-10 -top-10 h-56 w-56 text-[#253936] md:h-80 md:w-80" viewBox="0 0 200 200" aria-hidden="true"><path fill="#2b423e" d="M200 0v140l-30-30 10-34-34 6-10-34-30 22-14-36-22 30-30-12 6 32-30 6 20 28-30 16 34 4 6 32 28-20 22 32 12-34 36 4-6-34 34-10-22-28z"/></svg>
         <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <a href="https://www.youtube.com/watch?v=cc8__YEbFRo" target="_blank" rel="noopener noreferrer" class="reveal group mx-auto block w-full max-w-md" aria-label="Ver el video del festival Yvy Porá 2026 en YouTube">
-            <div class="relative -rotate-2 overflow-hidden rounded-2xl border-4 border-[#c8f23d] shadow-2xl shadow-black/40 transition duration-500 group-hover:rotate-0 group-hover:scale-[1.02]">
+            <div class="relative overflow-hidden border border-white/15 shadow-xl shadow-black/20 transition duration-500 group-hover:scale-[1.01]">
               <img src="./assets/yvy-pora-video.png" alt="Afiche del festival Yvy Porá 2026, quinta edición: 13, 14, 15 y 16 de agosto en Gran Guardia, Formosa" loading="lazy" class="block w-full" />
               <span class="absolute inset-0 grid place-items-center bg-black/10 transition group-hover:bg-black/25" aria-hidden="true">
-                <span class="grid h-20 w-20 place-items-center rounded-full bg-[#c8f23d] pl-1 text-3xl text-[#0c5c55] shadow-xl transition group-hover:scale-110"><i class="fa-solid fa-play"></i></span>
+                <span class="grid h-16 w-16 place-items-center rounded-full bg-[#b69a68] pl-1 text-2xl text-[#171b1d] transition group-hover:scale-105"><i class="fa-solid fa-play"></i></span>
               </span>
             </div>
           </a>
           <div class="reveal text-center lg:text-left">
-            <p class="inline-block rounded-full bg-[#c8f23d] px-5 py-1.5 text-xs font-black uppercase tracking-[0.25em] text-[#0c5c55]">5ª Edición · 2026</p>
-            <h2 class="mt-6 text-5xl font-black leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl" style="font-family: 'Lato', Arial, sans-serif">
-              ¡Reviví el festival <span class="text-[#c8f23d]">Yvy Porá</span> 2026!
+            <p class="inline-block border border-white/25 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#e2d7bf]">5ª Edición · 2026</p>
+            <h2 class="display-type mt-6 text-5xl font-semibold leading-tight text-white sm:text-6xl md:text-7xl">
+              Festival <span class="italic text-[#d0bb91]">Yvy Porá</span> 2026
             </h2>
             <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-white/85 lg:mx-0">
               La fiesta solidaria del Chaco formoseño. Se vivió el 13, 14, 15 y 16 de agosto en Gran Guardia, Formosa. Música, tradición y un pueblo que se une para ayudar.
             </p>
             <div class="mt-9 flex flex-wrap justify-center gap-4 lg:justify-start">
-              <a href="https://www.youtube.com/watch?v=cc8__YEbFRo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full bg-[#c8f23d] px-8 py-4 text-sm font-black uppercase tracking-[0.14em] text-[#0c5c55] shadow-lg shadow-black/30 transition hover:bg-white">
+              <a href="https://www.youtube.com/watch?v=cc8__YEbFRo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 border border-[#b69a68] bg-[#b69a68] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#171b1d] transition hover:bg-[#d6c6a4]">
                 <i class="fa-brands fa-youtube text-lg" aria-hidden="true"></i> Ver el video
               </a>
-              <a href="https://www.instagram.com/deyvypora.festival/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full bg-[#e2381f] px-8 py-4 text-sm font-black uppercase tracking-[0.14em] text-white shadow-lg shadow-black/30 transition hover:bg-[#c8f23d] hover:text-[#0c5c55]">
+              <a href="https://www.instagram.com/deyvypora.festival/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 border border-white/30 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:border-white hover:bg-white/10">
                 <i class="fa-brands fa-instagram text-lg" aria-hidden="true"></i> @deyvypora.festival
               </a>
             </div>
